@@ -130,6 +130,7 @@ body {
 
 .mv__inner {
   padding: 50px 20px 255px;
+  position: relative;
 }
 
 .mv__content {
@@ -160,10 +161,37 @@ body {
 }
 
 .mv__description {
+  text-align: center;
+  letter-spacing: 0.48px;
+  font-weight: bold;
+  margin-top: 26px;
 }
 
 .mv__button {
+  margin-top: 22px;
+  text-align: center;
+
+  a {
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.48px;
+    color: #fff;
+    display: inline-block;
+    padding: calc(10px - 2px) calc(30px - 2px);
+    border: 2px solid #fff;
+    border-radius: 60px;
+    background-color: $color-base;
+  }
 }
 
 .mv__image {
+  position: absolute;
+  left: 0;
+  bottom: -108px;
+  width: 100%;
+  text-align: center;
+
+  img {
+    width: 345px;
+  }
 }

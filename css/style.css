@@ -97,6 +97,7 @@ body {
 
 .mv__inner {
   padding: 50px 20px 255px;
+  position: relative;
 }
 
 .mv_lead1,
@@ -116,4 +117,38 @@ body {
 
 .mv_lead2 {
   margin-top: 8px;
+}
+
+.mv__description {
+  text-align: center;
+  letter-spacing: 0.48px;
+  font-weight: bold;
+  margin-top: 26px;
+}
+
+.mv__button {
+  margin-top: 22px;
+  text-align: center;
+}
+.mv__button a {
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  color: #fff;
+  display: inline-block;
+  padding: 8px 28px;
+  border: 2px solid #fff;
+  border-radius: 60px;
+  background-color: #111;
+}
+
+.mv__image {
+  position: absolute;
+  left: 0;
+  bottom: -108px;
+  width: 100%;
+  text-align: center;
+}
+.mv__image img {
+  width: 345px;
 }/*# sourceMappingURL=style.css.map */
