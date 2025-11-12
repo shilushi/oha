@@ -126,11 +126,25 @@ body {
   max-width: calc(100% - 15px * 2);
   margin-inline: auto;
   background: $color-gradation;
+
+  @include mq(pc) {
+    border-radius: 30px;
+    max-width: calc(100% - 30px * 2);
+  }
 }
 
 .mv__inner {
   padding: 50px 20px 255px;
   position: relative;
+
+  @include mq(pc) {
+    padding-top: 110px;
+    padding-bottom: 109px;
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: calc(1040px + 15px * 2);
+    margin-inline: auto;
+  }
 }
 
 .mv__content {
@@ -152,12 +166,22 @@ body {
   display: block;
   width: fit-content;
   margin-inline: auto;
+
+  @include mq(pc) {
+    margin-inline: 0;
+    font-size: 38px;
+    letter-spacing: 3.8px;
+    padding: 12px 16px;
+  }
 }
 
 .mv_lead1 {
 }
 .mv_lead2 {
   margin-top: 8px;
+  @include mq(pc) {
+    margin-top: 14px;
+  }
 }
 
 .mv__description {
@@ -165,11 +189,23 @@ body {
   letter-spacing: 0.48px;
   font-weight: bold;
   margin-top: 26px;
+
+  @include mq(pc) {
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    margin-top: 20px;
+  }
 }
 
 .mv__button {
   margin-top: 22px;
   text-align: center;
+
+  @include mq(pc) {
+    text-align-last: left;
+    margin-top: 30px;
+  }
 
   a {
     text-align: center;
@@ -186,12 +222,22 @@ body {
 
 .mv__image {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: -108px;
   width: 100%;
   text-align: center;
 
+  @include mq(pc) {
+    width: calc(600px / 1100px * 100%);
+    text-align: right;
+    bottom: -88px;
+  }
+
   img {
     width: 345px;
+
+    @include mq(pc) {
+      width: 600px;
+    }
   }
 }
