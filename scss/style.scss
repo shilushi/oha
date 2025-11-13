@@ -296,3 +296,54 @@ body {
   img {
   }
 }
+
+/*    news
+--------------------*/
+.news {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.news__inner {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.news__card {
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0px 9px 30px 0px #f4f4f4;
+}
+
+.news__title {
+  padding-top: 40px;
+  text-align: center;
+  font-family: $font-family-en;
+  font-weight: 700;
+  font-size: 38px;
+  letter-spacing: 3.8px;
+}
+
+.news__lists {
+}
+
+.news__list {
+}
+
+.news-link {
+}
+
+.news-link__meta {
+}
+
+.news-link__date {
+}
+
+.news-link__label {
+}
+
+.news-link__title {
+}
+
+.news__link {
+}
