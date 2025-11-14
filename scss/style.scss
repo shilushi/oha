@@ -11,6 +11,7 @@ $color-base: #111;
 $background-base: #fafafa;
 $color-key1: #f5810e;
 $color-key2: #fabe00;
+$color-key3: #389b47;
 $color-gradation: linear-gradient(180deg, #f8b819 0%, #f0d320 100%);
 
 $width-inner: 1140px;
@@ -307,43 +308,132 @@ body {
 .news__inner {
   padding-right: 15px;
   padding-left: 15px;
+
+  @include mq(pc) {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: calc($width-inner + 30px * 2);
+    margin-inline: auto;
+  }
 }
 
 .news__card {
   border-radius: 20px;
   background-color: #fff;
   box-shadow: 0px 9px 30px 0px #f4f4f4;
+  padding: 40px 12px;
+
+  @include mq(pc) {
+    border-radius: 30px;
+    padding-right: calc(105px / 1140px * 100%);
+    padding-left: calc(105px / 1140px * 100%);
+    padding-top: 40px;
+    padding-bottom: 34px;
+  }
 }
 
 .news__title {
-  padding-top: 40px;
   text-align: center;
   font-family: $font-family-en;
   font-weight: 700;
+  line-height: 1;
   font-size: 38px;
   letter-spacing: 3.8px;
+
+  @include mq(pc) {
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-align: left;
+  }
 }
 
 .news__lists {
+  margin-top: 28px;
 }
 
 .news__list {
+  &:nth-child(n + 2) {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      top: 0;
+      left: 0;
+      background-color: #e3e3e3;
+    }
+  }
 }
 
 .news-link {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @include mq(pc) {
+    flex-direction: row;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    gap: 0;
+  }
 }
 
 .news-link__meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  @include mq(pc) {
+    width: 247px;
+    flex-shrink: 0;
+    gap: 14px;
+  }
 }
 
 .news-link__date {
+  color: #333;
+  white-space: nowrap;
+
+  @include mq(pc) {
+    width: 119px;
+  }
 }
 
 .news-link__label {
+  font-weight: 700;
+  font-size: 11px;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 2px;
+  min-width: 63px;
+  text-align: center;
+
+  &.is-news {
+    background-color: $color-key1;
+  }
+  &.is-column {
+    background-color: $color-key2;
+  }
+  &.is-event {
+    background-color: $color-key3;
+  }
 }
 
 .news-link__title {
 }
 
 .news__link {
+  text-align: right;
+  margin-top: 22px;
+  a {
+    font-weight: 700;
+    line-height: 1;
+    display: inline-block;
+    border-bottom: 2px solid $color-base;
+    padding-bottom: calc(10px - 2px);
+  }
 }

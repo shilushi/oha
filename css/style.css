@@ -277,18 +277,130 @@ body {
   padding-right: 15px;
   padding-left: 15px;
 }
+@media screen and (width >= 768px) {
+  .news__inner {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+}
 
 .news__card {
   border-radius: 20px;
   background-color: #fff;
   box-shadow: 0px 9px 30px 0px #f4f4f4;
+  padding: 40px 12px;
+}
+@media screen and (width >= 768px) {
+  .news__card {
+    border-radius: 30px;
+    padding-right: 9.2105263158%;
+    padding-left: 9.2105263158%;
+    padding-top: 40px;
+    padding-bottom: 34px;
+  }
 }
 
 .news__title {
-  padding-top: 40px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  line-height: 1;
   font-size: 38px;
   letter-spacing: 3.8px;
+}
+@media screen and (width >= 768px) {
+  .news__title {
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-align: left;
+  }
+}
+
+.news__lists {
+  margin-top: 28px;
+}
+
+.news__list:nth-child(n+2) {
+  position: relative;
+}
+.news__list:nth-child(n+2)::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: 0;
+  background-color: #e3e3e3;
+}
+
+.news-link {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media screen and (width >= 768px) {
+  .news-link {
+    flex-direction: row;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    gap: 0;
+  }
+}
+
+.news-link__meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+@media screen and (width >= 768px) {
+  .news-link__meta {
+    width: 247px;
+    flex-shrink: 0;
+    gap: 14px;
+  }
+}
+
+.news-link__date {
+  color: #333;
+  white-space: nowrap;
+}
+@media screen and (width >= 768px) {
+  .news-link__date {
+    width: 119px;
+  }
+}
+
+.news-link__label {
+  font-weight: 700;
+  font-size: 11px;
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 2px;
+  min-width: 63px;
+  text-align: center;
+}
+.news-link__label.is-news {
+  background-color: #f5810e;
+}
+.news-link__label.is-column {
+  background-color: #fabe00;
+}
+.news-link__label.is-event {
+  background-color: #389b47;
+}
+
+.news__link {
+  text-align: right;
+  margin-top: 22px;
+}
+.news__link a {
+  font-weight: 700;
+  line-height: 1;
+  display: inline-block;
+  border-bottom: 2px solid #111;
+  padding-bottom: 8px;
 }/*# sourceMappingURL=style.css.map */
